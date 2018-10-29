@@ -31,7 +31,8 @@ AFRAME.registerComponent('gps-position', {
 			this.zeroCrd = {latitude: this.data['zero-crd-latitude'], longitude: this.data['zero-crd-longitude']};
 		}
 		
-		this.watchId = this.watchGPS(function(position){
+		this.watchId = this.watchGPS(function(position, err){
+		console.log(err);
 			this.crd = position.coords;
 			this.updatePosition();
 		}.bind(this));
