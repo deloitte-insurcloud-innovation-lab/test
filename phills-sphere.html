@@ -5,8 +5,7 @@
 <script>THREEx.ArToolkitContext.baseURL = 'https://jeromeetienne.github.io/AR.js/three.js/'</script>
 <script>
 
-AFRAME.registerComponent('gps-position', {
-	
+AFRAME.registerComponent('gps-position', {	
 	watchId: null,
 	zeroCrd: null,
 	crd: null,
@@ -101,10 +100,7 @@ AFRAME.registerComponent('gps-position', {
 	}
 	
 });
-
-
-AFRAME.registerComponent('compass-rotation', {
-	
+AFRAME.registerComponent('compass-rotation', {	
 	lookControls: null,
 	lastTimestamp: 0,
 	heading: null,
@@ -257,10 +253,7 @@ AFRAME.registerComponent('compass-rotation', {
 	}
 	
 });
-
-
 AFRAME.registerComponent('gps-place', {
-	
 	cameraGpsPosition: null,
 	deferredInitInterval: 0,
 	
@@ -334,9 +327,7 @@ AFRAME.registerComponent('gps-place', {
 	
 });
 
-
 window.onload = function(){
-	
 	var camera = document.getElementById('camera');
 	
 	camera.addEventListener('componentchanged', function (evt) {
@@ -372,11 +363,9 @@ window.onload = function(){
 						zero_crd_latitude.innerText = gpsPosition.zeroCrd.latitude;
 					}
 				}
-				
 				break;
 		}
 	});
-	
 };
 
 
