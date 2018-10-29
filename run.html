@@ -360,6 +360,7 @@ window.onload = function(){
 	var camera = document.getElementById('camera');
 	
 	camera.addEventListener('componentchanged', function (evt) {
+	console.log(evt);
 		switch(evt.detail.name){
 			case 'rotation':
 				//console.log('camera rotation changed', evt.detail.newData);
